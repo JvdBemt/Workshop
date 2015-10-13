@@ -1,0 +1,13 @@
+CREATE TABLE `klant` (
+  `klant_id` int(11) NOT NULL,
+  `voornaam` varchar(45) NOT NULL,
+  `achternaam` varchar(45) NOT NULL,
+  `tussenvoegsel` varchar(10) DEFAULT NULL,
+  `email` varchar(320) NOT NULL,
+  `straatnaam` varchar(26) DEFAULT NULL,
+  `postcode` int(6) DEFAULT NULL,
+  `huisnummer` int(10) DEFAULT NULL,
+  `woonplaats` varchar(26) DEFAULT NULL,
+  PRIMARY KEY (`klant_id`),
+  UNIQUE KEY `klant_constraint` (`voornaam`,`achternaam`,`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=hp8;
