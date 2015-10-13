@@ -1,0 +1,21 @@
+CREATE TABLE `bestelling` (
+  `bestelling_id` int(11) NOT NULL,
+  `klant_id` int(11) NOT NULL,
+  `bestellingcol` varchar(45) DEFAULT NULL,
+  `bestellingcol1` varchar(45) DEFAULT NULL,
+  `artikel1_id` int(11) DEFAULT NULL,
+  `artikel2_id` int(11) DEFAULT NULL,
+  `artikel3_id` int(11) DEFAULT NULL,
+  `artikel1_prijs` int(6) DEFAULT NULL,
+  `artikel2_prijs` int(6) DEFAULT NULL,
+  `artikel3_prijs` int(6) DEFAULT NULL,
+  `artikel1_naam` varchar(45) DEFAULT NULL,
+  `artikel2_naam` varchar(45) DEFAULT NULL,
+  `artikel3_naam` varchar(45) DEFAULT NULL,
+  `artikel1_aantal` int(2) DEFAULT NULL,
+  `artikel2_aantal` int(2) DEFAULT NULL,
+  `artikel3_aantal` int(2) DEFAULT NULL,
+  PRIMARY KEY (`bestelling_id`),
+  KEY `klant_id_idx` (`klant_id`),
+  CONSTRAINT `klant_id` FOREIGN KEY (`klant_id`) REFERENCES `klant` (`klant_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=hp8 COMMENT='				';
