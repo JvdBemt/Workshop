@@ -1,8 +1,6 @@
 CREATE TABLE `bestelling` (
   `bestelling_id` int(11) NOT NULL,
   `klant_id` int(11) NOT NULL,
-  `bestellingcol` varchar(45) DEFAULT NULL,
-  `bestellingcol1` varchar(45) DEFAULT NULL,
   `artikel1_id` int(11) DEFAULT NULL,
   `artikel2_id` int(11) DEFAULT NULL,
   `artikel3_id` int(11) DEFAULT NULL,
